@@ -1,0 +1,94 @@
+<head>
+    
+    <title>PT 1 HCI</title>
+    <script src="http://code.jquery.com/jquery-1.5.min.js"></script>
+    <style
+    >body{
+        font-family:Verdana;
+        font-size:13px;
+        }
+        #form_container{
+        width:400px;
+        margin:0 auto;
+        overflow:hidden;
+        border:1px solid #ccc;
+        border-radius:5px;
+        padding:10px;
+        }
+        h2{
+        text-align:center;
+        }
+        .error{
+        color:#f00;
+        }
+        #form_container span{
+        float:right;
+        display:block;
+        clear:both;
+        }
+        #form_container label{
+        display:block;
+        float:left;
+        margin:5px 0;   
+        width:150px;
+        }
+        #form_container input{
+        float:right;
+        margin:5px 0;
+        }
+        #form_container input[type="submit"]{
+        float:left;
+        margin:8px 0 0 254px;
+        }
+        </style>
+    </head>
+    <body>
+
+    <h2>Fill up form and hit submit</h2>
+    
+    <div id="form_container">
+    <form id="reg_form" action="" method="post">
+
+    <label>First Name</label>
+    <input type="text" id="fname" placeholder="First Name"/>
+   
+
+    <label>Last Name</label>
+    <input type="text" id="lname" placeholder="Last Name"/>
+
+
+    <label>Birth Date</label>
+    <input type="date" id="date"/>
+
+
+    <label>Messages:</label>
+    <textarea type="text" id="tmessage" placeholder="Type Messages Here"></textarea>
+
+
+    <button id="btn">Submit</button>
+    
+    </form>
+    </div>
+    </body>
+
+    <script>
+
+        $(document).ready(function () {
+
+
+            $("#btn").click(function () {
+                var fna = $("#fname").val();
+                var lna = $("#lname").val();
+                var date = $("#date").val();
+                var mess = $("#tmessage").val();
+                console.log(fna, lna, date, mess);
+                $("#form_container").html("<b>Name :</b> " +  fna + lna + "<br><b>Date :</b> "+  date + 
+                "<br><b>Sent Message Appear Here : </b> "+ mess).css("border", "5px solid gray");
+                $("#form_container").append(txt);
+
+});
+});
+</script>
+
+    
+    
